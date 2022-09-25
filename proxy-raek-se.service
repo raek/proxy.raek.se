@@ -1,0 +1,11 @@
+[Unit]
+Description=Small web to HTTP proxy
+
+[Service]
+Type=notify
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=%h/.local/bin/proxy_raek_se
+SyslogIdentifier=proxy.raek.se
+
+[Install]
+WantedBy=default.target
